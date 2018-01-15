@@ -312,6 +312,12 @@ class Block extends Entity {
     hit(ball) {
         ball.removeTarget(this);
         this.manager.removeTarget(this);
+
+        let element = document.getElementById('score');
+        let point = parseInt(element.innerHTML);
+        point += 1;
+        element.innerHTML = point;
+
     }
 }
 
